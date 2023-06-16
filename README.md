@@ -1,1 +1,1 @@
-# Retail-price-optimization
+A website which determines the optimal prices of the products based on the retail price and discount price which maximizes the profit for retailers using machine learning.Front end is done using HTNL and CSS and connected backend server using Python.
