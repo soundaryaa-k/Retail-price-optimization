@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETAIL PRICE OPTIMIZATION</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!--to perform jquery operation-->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <div class="img"></div>
+    <header> RETAIL PRICE OPTIMIZATION</header>
+    <form action="" class="form" method="post">
+        <div class="cat1">
+            <h2>Category</h2>
+
+            <select class="category" name="category" id="cat">
+                <option name="category" value="" disabeld="disabled" selected="selected">Choose a category</option>
+
+                <option name="category" value="">["Computers >> Network Components >> Routers >> Apple Routers"]
+                </option>
+                <option name="category" value="">["Jewellery >> Jewellery Sets"]</option>
+                <!--we can dynamically populate using js -->
+            </select>
+            <button onclick="fetchBrands(event)" class="next">Next</button>
+        </div>
+        <div class="brad1">
+            <h2>Brand</h2>
+
+            <select class="brand" name="brand" id="brad">
+                <option name="brand" value="" disabled="disabled" selected="selected">Choose a Brand</option>
+                <option name="brand" value="Apple">Apple</option>
+                <option name="brand" value="Archi Collection">Archi Collection</option>
+            </select>
+            <button onclick="fetchproduct(event)" class="next">Next</button>
+        </div>
+        <div class="prod1">
+            <h2>Product</h2>
+
+            <select class="product" name="product" id="prod">
+                <option name="product" value="" disabeld="disabled" selected="selected">Choose a product</option>
+                <option name="product" value="">Apple AirPort Express Base Station Wireless Router</option>
+                <option name="product" value="">Archi Collection Alloy Jewel Set</option>
+                <!--we can dynamically populate using js -->
+            </select>
+        </div>
+        <div class="di1">
+            <h2>Disount Price</h2>
+
+            <input class='discount' type="text" id="dis" name="discounted price" value="1000">
+        </div>
+        <div class="prices">
+            <form action="" class="form" method="post">
+                <button class="submit" onclick="optimizedPrice();return false" type="submit">Optimize Price</button>
+                <div class="result" id="optimizedPrice">
+                    <h2>OPTIMIZED PRICE</h2>
+                </div>
+                <div class="result" id="discount_">
+                    <h2>PREVIOUS DISCOUNT</h2>
+                </div>
+                <div class="result" id="retail_price_">
+                    <h2>ORIGINAL RETAIL PRICE</h2>
+                </div>
+                <div class="result" id="new_discount">
+                    <h2>OPTIMIZED DISCOUNT</h2>
+                </div>
+            </form>
+        </div>
+    </form>
+    <div class="chart">
+        <canvas id="optimizedDiscountChart" style="width: 100px; height: 500px; display: block; box-sizing: border-box;"
+            width="202" height="130"></canvas>
+        <h2></h2>
+        <canvas id="previousDiscountChart" style="width: 100px; height: 500px; display: block; box-sizing: border-box;"
+            width="202" height="130"></canvas>
+        <h2></h2>
+    </div>
+    <div class="graphs">
+        <div class="graph">
+            <img src="D:\minor project\server_1\artifacts\graph1.png" alt="Graph">
+            <img src="D:\minor project\server_1\artifacts\graph2.png" alt="Graph">
+        </div>
+    </div>
+</body>
+
+</html>
